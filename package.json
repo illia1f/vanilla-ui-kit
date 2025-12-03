@@ -1,0 +1,23 @@
+{
+  "name": "vanilla-ui-kit",
+  "version": "1.0.0",
+  "description": "A lightweight, framework-free UI component library",
+  "type": "module",
+  "main": "dist/ui-kit.js",
+  "style": "dist/ui-kit.css",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "dev": "node scripts/dev-server.js",
+    "test": "node scripts/test.js"
+  },
+  "keywords": [
+    "ui-kit",
+    "vanilla",
+    "components",
+    "css",
+    "javascript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {}
+}

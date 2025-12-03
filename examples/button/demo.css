@@ -1,0 +1,66 @@
+body {
+  padding: var(--spacing-xl);
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: var(--font-family);
+}
+
+header {
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: var(--border-width) solid var(--border-color);
+}
+
+header h1 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.section {
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-lg);
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius-lg);
+}
+
+.section h2 {
+  margin-bottom: var(--spacing-md);
+  color: var(--text-color);
+  font-size: 1.5rem;
+}
+
+.example-group {
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background: var(--bg-color);
+  border-radius: var(--border-radius);
+}
+
+.example-group:last-child {
+  margin-bottom: 0;
+}
+
+.example-group h3 {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-md);
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.example-group > *:not(h3) {
+  margin-right: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+  display: inline-block;
+}
+
+code {
+  display: block;
+  margin-top: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius-sm);
+  font-family: "Courier New", monospace;
+  font-size: var(--font-size-sm);
+  color: var(--text-color);
+  white-space: pre-wrap;
+  word-break: break-all;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Component - Vanilla UI Kit</title>
+
+    <link rel="stylesheet" href="../../src/styles/base.css">
+    <link rel="stylesheet" href="../../src/styles/utilities.css">
+    <link rel="stylesheet" href="../../components/button/button.css">
+
+    <link rel="stylesheet" href="demo.css">
+</head>
+
+<body>
+    <header>
+        <h1>Button Component - Loading States</h1>
+        <p class="text-muted">Interactive buttons with loading state functionality.</p>
+    </header>
+
+    <main>
+        <section class="section">
+            <h2>Loading Buttons</h2>
+
+            <div class="example-group">
+                <h3>Loading State - Primary</h3>
+                <button class="btn btn-primary" data-loading="false" data-loading-text="Processing"
+                    data-onclick="handleSubmit">Submit</button>
+                <p class="text-muted text-sm mt-sm">
+                    Click the button above to see the loading state in action.
+                </p>
+                <code>&lt;button class="btn btn-primary" data-loading="false" data-loading-text="Processing" data-onclick="handleSubmit"&gt;Submit&lt;/button&gt;</code>
+            </div>
+
+            <div class="example-group">
+                <h3>Loading State - Outline</h3>
+                <button class="btn btn-outline-primary" data-loading="false" data-loading-text="Saving"
+                    data-onclick="handleSave">Save
+                    Changes</button>
+                <p class="text-muted text-sm mt-sm">
+                    Click the button above to see the loading state in action.
+                </p>
+                <code>&lt;button class="btn btn-outline-primary" data-loading="false" data-loading-text="Saving" data-onclick="handleSave"&gt;Save Changes&lt;/button&gt;</code>
+            </div>
+
+            <div class="example-group">
+                <h3>Loading State - Ghost</h3>
+                <button class="btn btn-ghost" data-loading="false" data-loading-text="Loading"
+                    data-onclick="handleLoadMore">Load More</button>
+                <p class="text-muted text-sm mt-sm">
+                    Click the button above to see the loading state in action.
+                </p>
+                <code>&lt;button class="btn btn-ghost" data-loading="false" data-loading-text="Loading" data-onclick="handleLoadMore"&gt;Load More&lt;/button&gt;</code>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="../../components/button/button.mjs"></script>
+    <script>
+        function handleSubmit(button, event) {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    console.log("Submit clicked!");
+                    alert("Submitted!");
+                    resolve();
+                }, 2000);
+            });
+        }
+
+        function handleSave(button, event) {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    console.log("Save clicked!");
+                    alert("Changes saved!");
+                    resolve();
+                }, 1500);
+            });
+        }
+
+        function handleLoadMore(button, event) {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    console.log("Load more clicked!");
+                    alert("Loading more...");
+                    resolve();
+                }, 100);
+            });
+        }
+    </script>
+</body>
+
+</html>
