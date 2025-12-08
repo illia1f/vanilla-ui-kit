@@ -1,4 +1,4 @@
-import { $$ } from "../../src/scripts/utils.mjs";
+import { $$ } from "@/scripts/utils.mjs";
 
 (function () {
   "use strict";
