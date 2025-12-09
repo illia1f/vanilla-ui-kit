@@ -8,53 +8,59 @@
 
     <link rel="stylesheet" href="src/styles/base.css">
     <link rel="stylesheet" href="src/styles/utilities.css">
+    <link rel="stylesheet" href="src/styles/app.css">
     <link rel="stylesheet" href="src/components/button/button.css">
     <link rel="stylesheet" href="examples/button/demo.css">
 </head>
 
 <body>
-    <header>
-        <h1>Button Component - Loading States</h1>
-        <p class="text-muted">Interactive buttons with loading state functionality.</p>
-    </header>
+    <div id="app">
+        <aside id="side-panel" class="side-panel"></aside>
 
-    <main>
-        <section class="section">
-            <h2>Loading Buttons</h2>
+        <main id="example-container" class="example-container">
+            <header>
+                <h1>Button Component - Loading States</h1>
+                <p class="text-muted">Interactive buttons with loading state functionality.</p>
+            </header>
 
-            <div class="example-group">
-                <h3>Loading State - Primary</h3>
-                <button class="btn btn-primary" data-loading="false" data-loading-text="Processing"
-                    data-onclick="handleSubmit">Submit</button>
-                <p class="text-muted text-sm mt-sm">
-                    Click the button above to see the loading state in action.
-                </p>
-                <code>&lt;button class="btn btn-primary" data-loading="false" data-loading-text="Processing" data-onclick="handleSubmit"&gt;Submit&lt;/button&gt;</code>
-            </div>
+            <section class="section">
+                <h2>Loading Buttons</h2>
 
-            <div class="example-group">
-                <h3>Loading State - Outline</h3>
-                <button class="btn btn-outline-primary" data-loading="false" data-loading-text="Saving"
-                    data-onclick="handleSave">Save
-                    Changes</button>
-                <p class="text-muted text-sm mt-sm">
-                    Click the button above to see the loading state in action.
-                </p>
-                <code>&lt;button class="btn btn-outline-primary" data-loading="false" data-loading-text="Saving" data-onclick="handleSave"&gt;Save Changes&lt;/button&gt;</code>
-            </div>
+                <div class="example-group">
+                    <h3>Loading State - Primary</h3>
+                    <button class="btn btn-primary" data-loading="false" data-loading-text="Processing"
+                        data-onclick="handleSubmit">Submit</button>
+                    <p class="text-muted text-sm mt-sm">
+                        Click the button above to see the loading state in action.
+                    </p>
+                    <code>&lt;button class="btn btn-primary" data-loading="false" data-loading-text="Processing" data-onclick="handleSubmit"&gt;Submit&lt;/button&gt;</code>
+                </div>
 
-            <div class="example-group">
-                <h3>Loading State - Ghost</h3>
-                <button class="btn btn-ghost" data-loading="false" data-loading-text="Loading"
-                    data-onclick="handleLoadMore">Load More</button>
-                <p class="text-muted text-sm mt-sm">
-                    Click the button above to see the loading state in action.
-                </p>
-                <code>&lt;button class="btn btn-ghost" data-loading="false" data-loading-text="Loading" data-onclick="handleLoadMore"&gt;Load More&lt;/button&gt;</code>
-            </div>
-        </section>
-    </main>
+                <div class="example-group">
+                    <h3>Loading State - Outline</h3>
+                    <button class="btn btn-outline-primary" data-loading="false" data-loading-text="Saving"
+                        data-onclick="handleSave">Save
+                        Changes</button>
+                    <p class="text-muted text-sm mt-sm">
+                        Click the button above to see the loading state in action.
+                    </p>
+                    <code>&lt;button class="btn btn-outline-primary" data-loading="false" data-loading-text="Saving" data-onclick="handleSave"&gt;Save Changes&lt;/button&gt;</code>
+                </div>
 
+                <div class="example-group">
+                    <h3>Loading State - Ghost</h3>
+                    <button class="btn btn-ghost" data-loading="false" data-loading-text="Loading"
+                        data-onclick="handleLoadMore">Load More</button>
+                    <p class="text-muted text-sm mt-sm">
+                        Click the button above to see the loading state in action.
+                    </p>
+                    <code>&lt;button class="btn btn-ghost" data-loading="false" data-loading-text="Loading" data-onclick="handleLoadMore"&gt;Load More&lt;/button&gt;</code>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script type="module" src="src/main.js"></script>
     <script type="module" src="src/components/button/button.mjs"></script>
     <script>
         function handleSubmit(button, event) {
